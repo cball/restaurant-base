@@ -2,5 +2,10 @@
 'use strict';
 
 module.exports = {
-  name: 'restaurant-base'
+  name: 'restaurant-base',
+
+  included: function(app) {
+    // console.log(this.project.config(app.env));
+    this._super.included(app);
+  }
 };
